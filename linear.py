@@ -28,11 +28,8 @@ class Algo():
       # Mean squared error loss
     def mse(self, label):
         self.label = label
-        # Calculate difference between label and output
-        difference = self.label-self.out
-         
-        # Return squared difference
-        return difference*difference
+        # Calculate difference between label and output. Return squared difference
+        return (self.label-self.out)**2
 
     def gradient(self, lr):
         # Derivative of mse function with respect to a weight = -2(x) where x is = label-predicted
