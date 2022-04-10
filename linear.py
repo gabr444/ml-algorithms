@@ -79,7 +79,7 @@ for i in range(epochs):
         linear.gradient(lr)
     print(loss)
     # Compare the labeled outputs to the current outputs on a graph (dots are labeled outputs, line is the current outputs).
-    # You will notice how the line gets closer to the labeled outputs after every epoch.
+    # You will notice how the line gets closer to the labeled outputs after each epoch.
     plt.plot(x, y, 'ro')
     plt.plot([x[0], x[len(x)-1]], [(x[0]*linear.getWeight())+linear.getBias(), (x[len(x)-1]*linear.getWeight())+linear.getBias()], 'r')
     plt.show()
